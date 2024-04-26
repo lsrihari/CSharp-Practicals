@@ -11,6 +11,11 @@ namespace CSharp.Practicals
         public Inheritance()
         {
             Derived d = new Derived();
+            d.FunctionToOverride();
+            Base b = new Base();
+            b.FunctionToOverride();
+            Base bd = new Derived();
+            bd.FunctionToOverride();
         }
 
     }
@@ -24,6 +29,11 @@ namespace CSharp.Practicals
         {
             Console.WriteLine("Base class static constructor.");
         }
+        public virtual void FunctionToOverride()
+        {
+            Console.WriteLine("Base class virtual function");
+        }
+
     }
     public class Derived:Base
     {
@@ -35,6 +45,10 @@ namespace CSharp.Practicals
         static Derived()
         {
             Console.WriteLine("Derived class static constructor.");
+        }
+        public override void FunctionToOverride()
+        {
+            Console.WriteLine("Derived class overriden function");
         }
     }
 }

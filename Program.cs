@@ -11,7 +11,7 @@ namespace CSharp.Practicals
         static ManualResetEvent objManual = new ManualResetEvent(false);
         static void Main(string[] args)
         {
-            
+
             #region Thread - 1
             //Thread obj1 = new Thread(Function1); // -> Foreground threads
             ////Thread obj2 = new Thread(Function2);
@@ -106,7 +106,7 @@ namespace CSharp.Practicals
             #endregion
 
             #region Inheritance
-            //Inheritance inObj = new Inheritance();
+            Inheritance inObj = new Inheritance();
             #endregion
         }
 
